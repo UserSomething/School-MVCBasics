@@ -1,0 +1,28 @@
+﻿@model School_MVCBasics.Models.FeverCheckerProgram
+@{
+    ViewData["Title"] = "FeverCheck";
+}
+
+<h1>Fever checker</h1>
+
+@using (Html.BeginForm("FeverCheck", "Doctor", FormMethod.Post))
+{
+    <label for="celcius">Enter fever in celcius:</label>
+    <br />
+    <input type="text" id="celcius" name="celcius">
+
+    <br />
+    <br />
+
+    <button type="submit">Get report</button>
+
+    <br />
+
+    <p>Celcius: @Model.Celcius</p>
+    <p>Fahrenheit: @Model.Fahrenheit</p>
+
+    <br />
+
+    <p>Results: @Model.ReportResults()</p>
+}
+

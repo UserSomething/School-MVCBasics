@@ -1,0 +1,26 @@
+﻿@model School_MVCBasics.Models.NumberGuessingGame
+@{
+    ViewData["Title"] = "GuessingGame";
+}
+
+<h1>GuessingGame</h1>
+
+<p>Guess a number between 1 and 100.</p>
+<p>You have unlimited tries.</p>
+
+@using (Html.BeginForm("GuessingGame", "GuessingGame", FormMethod.Post))
+{
+    <label for="userGuess">Enter a number:</label>
+    <br />
+    <input type="text" id="userGuess" name="userGuess">
+
+    <br />
+    <br />
+
+    <button type="submit">Guess</button>
+
+    <br />
+
+    <p>Result: @Model.GuessResult()</p>
+}
+

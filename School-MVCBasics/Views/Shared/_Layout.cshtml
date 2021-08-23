@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <img src="Images/logo.png" alt="Logo">
+        <nav>
+            @Html.ActionLink("Home", "Index", "Home") |
+            @Html.ActionLink("Test page", "TestView", "Home") |
+            @Html.ActionLink("About", "About", "Home") |
+            @Html.ActionLink("Contact", "Contact", "Home") |
+            @Html.ActionLink("Projects", "Projects", "Home")
+
+            <br />
+
+            @Html.ActionLink("Fever checker", "FeverCheck", "Doctor")
+
+            <br />
+
+            @Html.ActionLink("Number guessing game", "GuessingGame", "GuessingGame")
+
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>@DateTime.Now.Year - Pavle T</footer>
+</body>
+</html>
